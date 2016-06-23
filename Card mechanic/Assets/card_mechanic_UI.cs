@@ -10,6 +10,9 @@ public class card_mechanic_UI : MonoBehaviour
 	public float cardLerpRate;
 	public bool useDim;
 
+	public testTime testTimeScript;
+	public GameObject cardPrefab;
+
 	public GameObject dimScreen;
 	public Transform returnPos;
 	public card[] cards;
@@ -18,6 +21,7 @@ public class card_mechanic_UI : MonoBehaviour
 
 	void Awake()
 	{
+		testTimeScript = GetComponent<testTime>();
 		cardPoss = GetComponentsInChildren<cardpos>();
 		cards = GetComponentsInChildren<card>();
 		for (int i = 0; i < cards.Length; i++)
@@ -71,6 +75,12 @@ public class card_mechanic_UI : MonoBehaviour
 					activeCards[i].transform.position = Vector3.Lerp(activeCards[i].transform.position, cardPoss[2].transform.position, cardLerpRate);
 				}
 			}
+
+			/*if(drawnCards == 0)
+			{
+				card clone = Instantiate(cardPrefab, returnPos.position, Quaternion.identity) as card;
+				activeCards.Add(clone);
+			}*/
 			else
 			{
 				/**/
@@ -124,7 +134,9 @@ public class card_mechanic_UI : MonoBehaviour
 				activeCards.Add(cards[i]);
 			}
 		}
-		useDim = false;		
+		print("using effect of card");
+		useDim = false;
+		testTimeScript.isTimerRunning = true;	
 	}
 
 	public IEnumerator waitTime(float _time)
