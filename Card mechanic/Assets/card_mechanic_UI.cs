@@ -5,7 +5,9 @@ using UnityEngine.UI;
 
 public class card_mechanic_UI : MonoBehaviour
 {
+	#region Vars
 	public int drawnCards = 5;
+	private int maxCards = 5;
 	[Range (0, 1)]
 	public float cardLerpRate;
 	public bool useDim;
@@ -15,10 +17,11 @@ public class card_mechanic_UI : MonoBehaviour
 
 	public GameObject dimScreen;
 	public Transform returnPos;
-	public card[] cards;
+	private card[] cards;
 	public List<card> activeCards;
-	public cardpos[] cardPoss; 
-
+	public cardpos[] cardPoss;
+	#endregion
+	#region Stock
 	void Awake()
 	{
 		testTimeScript = GetComponent<testTime>();
@@ -47,54 +50,87 @@ public class card_mechanic_UI : MonoBehaviour
 		moveCards(useDim);
 		returnCards(!useDim);
 	}
-
+	#endregion
+	#region Custom
 	public void moveCards(bool _use)
 	{
 		if (_use)
 		{
 			StartCoroutine("waitTime", 1f);
-			if (drawnCards < 5)
+			Vector3 carD;
+			Vector3 currentDest;
+			Vector3 nextDest;
+
+			
+			if(drawnCards < maxCards
+			&& drawnCards > 1
+			&& drawnCards % 2 == 1)
 			{
-				/**/
+				/*dumb :(*/
+			//	Debug.Log("odd card num");
 				for (int i = 0; i < drawnCards; i++)
 				{
-					activeCards[i].transform.position = Vector3.Lerp(activeCards[i].transform.position, cardPoss[i + 1].transform.position, cardLerpRate);
+					carD = activeCards[i].transform.position;
+					currentDest = cardPoss[i].transform.position;
+					nextDest = cardPoss[i + 1].transform.position;
+
+					if (carD != nextDest)
+					{
+						activeCards[i].transform.position = Vector3.LerpUnclamped(carD, nextDest, cardLerpRate);
+						Debug.Log("cardpos " + i + " = " + carD.x + "  dest " + i + " = " + nextDest.x);
+					//	Debug.Log("dest " + i + " = " + nextDest.x);
+					}
+					else
+					{
+						Debug.Log("reched destination");
+					}
 				}
-				/*
-				for (int i = 0; i < cards.Length; i++)
+			}
+			if (drawnCards % 2 == 0)
+			{
+				/*sorted*/
+				Debug.Log("even card num");
+				for (int i = 0; i < drawnCards; i++)
 				{
-					float distance = Vector3.Distance(cards[i].transform.position, cardPoss[i].transform.position) / 100f;
-					cards[i].transform.position = Vector3.Lerp(cards[i].transform.position, cardPoss[i + 1].transform.position, distance * cardLerpRate);
-				}
-				*/
+					carD = activeCards[i].transform.position;
+					currentDest = cardPoss[i].transform.position;
+					nextDest = cardPoss[i + 1].transform.position;
+					Vector3 mid = new Vector3((currentDest.x + nextDest.x)/2, currentDest.y, 0);
+
+					if (carD != mid)
+					{
+						activeCards[i].transform.position = Vector3.Lerp(carD, mid, cardLerpRate);
+					}
+				}				
 			}
 			if (drawnCards == 1)
 			{
+				Debug.Log("1 card left");
 				for (int i = 0; i < drawnCards; i++)
 				{
-					activeCards[i].transform.position = Vector3.Lerp(activeCards[i].transform.position, cardPoss[2].transform.position, cardLerpRate);
+					carD = activeCards[i].transform.position;
+					Vector3 centre = cardPoss[2].transform.position;
+
+					if (carD != centre)
+					{
+						activeCards[i].transform.position = Vector3.Lerp(carD, centre, cardLerpRate);
+					}
 				}
 			}
-
-			/*if(drawnCards == 0)
-			{
-				card clone = Instantiate(cardPrefab, returnPos.position, Quaternion.identity) as card;
-				activeCards.Add(clone);
-			}*/
 			else
 			{
-				/**/
+				/*sorted*/
 				for (int i = 0; i < drawnCards; i++)
 				{
-					activeCards[i].transform.position = Vector3.Lerp(activeCards[i].transform.position, cardPoss[i].transform.position, cardLerpRate);
+					carD = activeCards[i].transform.position;
+					currentDest = cardPoss[i].transform.position;
+				//	nextDest = cardPoss[i + 1].transform.position;
+
+					if (activeCards[i].transform.position != currentDest)
+					{
+						activeCards[i].transform.position = Vector3.Lerp(carD, currentDest, cardLerpRate);
+					}
 				}
-				/*
-				for (int i = 0; i < cards.Length; i++)
-				{
-					float distance = Vector3.Distance(cards[i].transform.position, cardPoss[i].transform.position) / 100f;
-					cards[i].transform.position = Vector3.Lerp(cards[i].transform.position, cardPoss[i].transform.position, distance * cardLerpRate);
-				}
-				*/
 			}
 		}
 	}
@@ -112,14 +148,6 @@ public class card_mechanic_UI : MonoBehaviour
 					activeCards[i].transform.position = Vector3.Lerp(activeCards[i].transform.position, returnPos.position, cardLerpRate);
 				}
 			}
-			/*
-			for (int i = 0; i < cards.Length; i++)
-			{
-				float distance = Vector3.Distance(cards[i].transform.position, cardPoss[i].transform.position) / 100f;
-				cards[i].transform.position = Vector3.Lerp(cards[i].transform.position, returnPos.position, distance * cardLerpRate);
-			}
-			*/
-		//	yield return null;
 		}
 	}
 
@@ -136,7 +164,7 @@ public class card_mechanic_UI : MonoBehaviour
 		}
 		print("using effect of card");
 		useDim = false;
-		testTimeScript.isTimerRunning = true;	
+	//	testTimeScript.isTimerRunning = true;	
 	}
 
 	public IEnumerator waitTime(float _time)
@@ -144,4 +172,5 @@ public class card_mechanic_UI : MonoBehaviour
 		yield return new WaitForSeconds(_time);
 		StopCoroutine("waitTime");
 	}
+	#endregion
 }
