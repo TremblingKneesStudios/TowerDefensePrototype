@@ -19,6 +19,7 @@ public class card_mechanic_UI : MonoBehaviour
 	public Transform returnPos;
 	private card[] cards;
 	public List<card> activeCards;
+    public List<GameObject> deckOfCards;
 	public cardpos[] cardPoss;
 	#endregion
 	#region Stock
@@ -170,8 +171,21 @@ public class card_mechanic_UI : MonoBehaviour
 
     public void drawCards()
     {
-        //spawn 5 random cards into the scene at the start
-        //
+        //Get all cards into a list
+        GameObject[] localCards = GameObject.FindGameObjectsWithTag("Card");
+        for(int i = 0; i < localCards.Length; i++)
+        {
+            deckOfCards.Add(localCards[i]);
+            deckOfCards[i].SetActive(false);
+        }
+        //Randomly choose 5 from the list
+        for(int j = 0; j < drawnCards ; j++)
+        {
+            GameObject activeCard = deckOfCards[Random.Range(0, deckOfCards.Count )];  
+            activeCard.SetActive(true);
+            deckOfCards.Remove(activeCard);
+        }
+        //Instantiate them and make them children of the canvas 'Card System'
     }
 
 	public IEnumerator waitTime(float _time)
