@@ -1,0 +1,149 @@
+fileFormatVersion: 2
+guid: 62970f42dfbd14a4d93189ea33c4dced
+timeCreated: 1466747616
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Brick_Tower
+    100002: Champion
+    100004: Eye_Tower
+    100006: Ground
+    100008: //RootNode
+    100010: Lightning_Tower
+    100012: Mushroom
+    100014: Obelisk
+    100016: Orc
+    100018: Orc1
+    100020: Orc2
+    100022: Orc3
+    100024: Tree
+    100026: Unit
+    100028: Wall
+    100030: Wall1
+    400000: Brick_Tower
+    400002: Champion
+    400004: Eye_Tower
+    400006: Ground
+    400008: //RootNode
+    400010: Lightning_Tower
+    400012: Mushroom
+    400014: Obelisk
+    400016: Orc
+    400018: Orc1
+    400020: Orc2
+    400022: Orc3
+    400024: Tree
+    400026: Unit
+    400028: Wall
+    400030: Wall1
+    2300000: Brick_Tower
+    2300002: Champion
+    2300004: Eye_Tower
+    2300006: Ground
+    2300008: Lightning_Tower
+    2300010: Mushroom
+    2300012: Obelisk
+    2300014: Orc
+    2300016: Orc1
+    2300018: Orc2
+    2300020: Orc3
+    2300022: Tree
+    2300024: Unit
+    2300026: Wall
+    2300028: Wall1
+    3300000: Brick_Tower
+    3300002: Champion
+    3300004: Eye_Tower
+    3300006: Ground
+    3300008: Lightning_Tower
+    3300010: Mushroom
+    3300012: Obelisk
+    3300014: Orc
+    3300016: Orc1
+    3300018: Orc2
+    3300020: Orc3
+    3300022: Tree
+    3300024: Unit
+    3300026: Wall
+    3300028: Wall1
+    4300000: Champion
+    4300002: Unit
+    4300004: Ground
+    4300006: Orc
+    4300008: Brick_Tower
+    4300010: Obelisk
+    4300012: Mushroom
+    4300014: Wall1
+    4300016: Tree
+    4300018: Lightning_Tower
+    4300020: Wall
+    4300022: Orc1
+    4300024: Eye_Tower
+    4300026: Orc2
+    4300028: Orc3
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
