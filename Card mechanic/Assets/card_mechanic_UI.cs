@@ -27,7 +27,7 @@ public class card_mechanic_UI : MonoBehaviour
 	{
 		testTimeScript = GetComponent<testTime>();
 		cardPoss = GetComponentsInChildren<cardpos>();
-        drawCards();
+        drawStartingCards();
 		cards = GetComponentsInChildren<card>();
 		for (int i = 0; i < cards.Length; i++)
 		{
@@ -169,7 +169,7 @@ public class card_mechanic_UI : MonoBehaviour
 	//	testTimeScript.isTimerRunning = true;	
 	}
 
-    public void drawCards()
+    public void drawStartingCards()
     {
         //Get all cards into a list
         GameObject[] localCards = GameObject.FindGameObjectsWithTag("Card");
@@ -179,16 +179,30 @@ public class card_mechanic_UI : MonoBehaviour
             deckOfCards[i].SetActive(false);
         }
         //Randomly choose 5 from the list
+        //Set them active
+        //Remove them from the list so they can't be selected again
         for(int j = 0; j < drawnCards ; j++)
         {
             GameObject activeCard = deckOfCards[Random.Range(0, deckOfCards.Count )];  
             activeCard.SetActive(true);
             deckOfCards.Remove(activeCard);
         }
-        //Instantiate them and make them children of the canvas 'Card System'
     }
 
-	public IEnumerator waitTime(float _time)
+    public void drawNewCards()
+    {
+        
+        //Make all cards active
+
+        //Add all cards into a list
+
+        //*use drawCards() functionality*
+        //Randomly choose 5 from the list
+        //Set them active
+        //Remove them from the list so they can't be selected again
+    }
+
+    public IEnumerator waitTime(float _time)
 	{
 		yield return new WaitForSeconds(_time);
 		StopCoroutine("waitTime");
