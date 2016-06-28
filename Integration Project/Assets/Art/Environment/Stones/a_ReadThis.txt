@@ -1,1 +1,0 @@
-All stones use the same texture.

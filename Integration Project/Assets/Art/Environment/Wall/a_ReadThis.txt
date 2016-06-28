@@ -1,4 +1,0 @@
-Hello!!
-
-The wall assets have been texture atlassed, meaning they all share the same texture file.
-Just a heads up!
