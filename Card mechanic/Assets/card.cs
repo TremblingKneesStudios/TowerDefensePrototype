@@ -1,18 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public class card : MonoBehaviour {
+public class card : MonoBehaviour
+{
 
-	// Use this for initialization
-	void Start () {
-	
-	}
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
-	public void test()
+    //When this card is clicked, apply the effect changes for this round
+    //Deactivate this card
+	public void SelectThisCard()
 	{
 		this.gameObject.SetActive(false);
 	}

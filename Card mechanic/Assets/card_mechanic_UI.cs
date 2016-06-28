@@ -26,6 +26,7 @@ public class card_mechanic_UI : MonoBehaviour
 	{
 		testTimeScript = GetComponent<testTime>();
 		cardPoss = GetComponentsInChildren<cardpos>();
+        drawCards();
 		cards = GetComponentsInChildren<card>();
 		for (int i = 0; i < cards.Length; i++)
 		{
@@ -166,6 +167,12 @@ public class card_mechanic_UI : MonoBehaviour
 		useDim = false;
 	//	testTimeScript.isTimerRunning = true;	
 	}
+
+    public void drawCards()
+    {
+        //spawn 5 random cards into the scene at the start
+        //
+    }
 
 	public IEnumerator waitTime(float _time)
 	{
