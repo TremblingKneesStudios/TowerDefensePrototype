@@ -20,6 +20,7 @@ public class card_mechanic_UI : MonoBehaviour
 	private card[] cards;
 	public List<card> activeCards;
     public List<GameObject> deckOfCards;
+    public List<GameObject> masterDeckOfCards;
 	public cardpos[] cardPoss;
 	#endregion
 	#region Stock
@@ -27,6 +28,7 @@ public class card_mechanic_UI : MonoBehaviour
 	{
 		testTimeScript = GetComponent<testTime>();
 		cardPoss = GetComponentsInChildren<cardpos>();
+        assignCardsToList();
         drawStartingCards();
 		cards = GetComponentsInChildren<card>();
 		for (int i = 0; i < cards.Length; i++)
@@ -41,6 +43,14 @@ public class card_mechanic_UI : MonoBehaviour
 	}
 	void Update()
 	{
+        
+
+        if (activeCards.Count <= 0)
+        {
+            print("active cards is empty");
+            drawNewCards();
+        }
+
 		if (useDim)
 		{
 			dimScreen.SetActive(true);
@@ -143,12 +153,16 @@ public class card_mechanic_UI : MonoBehaviour
 		{
 			StartCoroutine("waitTime", 1f);
 			/**/
-			for (int i = 0; i < drawnCards; i++)
+			for (int i = 0; i < drawnCards; i++) 
 			{
 				if(activeCards[i].transform.position != returnPos.position)
 				{
 					activeCards[i].transform.position = Vector3.Lerp(activeCards[i].transform.position, returnPos.position, cardLerpRate);
 				}
+                else
+                {
+                    return;
+                }
 			}
 		}
 	}
@@ -168,6 +182,16 @@ public class card_mechanic_UI : MonoBehaviour
 		useDim = false;
 	//	testTimeScript.isTimerRunning = true;	
 	}
+
+    public void assignCardsToList()
+    {
+        //Get all cards into a list
+        GameObject[] localCards = GameObject.FindGameObjectsWithTag("Card");
+        for (int i = 0; i < localCards.Length; i++)
+        {
+            masterDeckOfCards.Add(localCards[i]);
+        }
+    }
 
     public void drawStartingCards()
     {
@@ -191,7 +215,20 @@ public class card_mechanic_UI : MonoBehaviour
 
     public void drawNewCards()
     {
+        deckOfCards = masterDeckOfCards;
         
+        for(int i = 0; i < masterDeckOfCards.Count; i++)
+        {
+            masterDeckOfCards[i].transform.position = returnPos.transform.position; 
+        }
+        drawnCards = 5;
+        for (int j = 0; j < drawnCards; j++)
+        {
+            GameObject activeCard = deckOfCards[Random.Range(0, deckOfCards.Count)];
+            activeCard.SetActive(true);
+            activeCards.Add(activeCard.GetComponent<card>());
+            deckOfCards.Remove(activeCard);
+        }
         //Make all cards active
 
         //Add all cards into a list
