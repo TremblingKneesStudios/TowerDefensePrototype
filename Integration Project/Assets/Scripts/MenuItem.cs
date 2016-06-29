@@ -21,7 +21,8 @@ public class MenuItem : MonoBehaviour {
 	private Canvas menuCanvas;
 	private Color mainColor; //Temp
 
-	public void SetMenuItem(float damageIn, float moveSpeedIn, float attackSpeedIn, float healthIn, string heroNameIn, Sprite mainSprite, Color mainColorIn, Sprite iconSprite, GameObject heroPrefabIn, Canvas menuCanvasIn)
+	public void SetMenuItem(float damageIn, float moveSpeedIn, float attackSpeedIn, float healthIn, string heroNameIn, 
+		Sprite mainSprite, Color mainColorIn, Sprite iconSprite, GameObject heroPrefabIn, Canvas menuCanvasIn)
 	{
 		damage = damageIn;
 		damageSlider.value = damageIn;
