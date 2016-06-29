@@ -10,7 +10,7 @@ public class NewCardScript : MonoBehaviour {
     public List<GameObject> masterDeckClone;    //aim to get rid mof this, make i redundant
     public List<GameObject> myDeck;
     public bool isActive;
-    private float speed = 5;                 
+    private float speed = 7.5f;                 
 
 	// Use this for initialization
 	void Start () {
