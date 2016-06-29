@@ -159,10 +159,9 @@ public class TowerManager : MonoBehaviour {
         upgradeCost *= increaseAmount;
         upgradeCost = Mathf.Round(upgradeCost);
 
-        Debug.Log(maxHealth);
-        Debug.Log(curHealth);
-        Debug.Log(power);
-        Debug.Log(upgradeCost);
+        Debug.Log("HP: " + curHealth + " / " + maxHealth);        
+        Debug.Log("POW: " + power);
+        Debug.Log("UP Cost: " + upgradeCost);
 
         canUpgrade = false;
     }
