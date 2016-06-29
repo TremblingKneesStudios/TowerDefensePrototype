@@ -22,6 +22,10 @@ public class testTime : MonoBehaviour
 		{
 			DelayTimer();
 		}
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            isTimerRunning = true;
+        }
 	}
 
 	void DelayTimer()

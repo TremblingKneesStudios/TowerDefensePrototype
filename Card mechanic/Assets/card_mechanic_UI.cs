@@ -13,7 +13,6 @@ public class card_mechanic_UI : MonoBehaviour
 	public bool useDim;
 
 	public testTime testTimeScript;
-	public GameObject cardPrefab;
 
 	public GameObject dimScreen;
 	public Transform returnPos;
@@ -22,6 +21,7 @@ public class card_mechanic_UI : MonoBehaviour
     public List<GameObject> deckOfCards;
     public List<GameObject> masterDeckOfCards;
 	public cardpos[] cardPoss;
+
 	#endregion
 	#region Stock
 	void Awake()
@@ -153,16 +153,12 @@ public class card_mechanic_UI : MonoBehaviour
 		{
 			StartCoroutine("waitTime", 1f);
 			/**/
-			for (int i = 0; i < drawnCards; i++) 
+			for (int i = 0; i < activeCards.Count; i++) 
 			{
-				if(activeCards[i].transform.position != returnPos.position)
+				if(activeCards[i].transform.position != returnPos.position) //error with this line 
 				{
 					activeCards[i].transform.position = Vector3.Lerp(activeCards[i].transform.position, returnPos.position, cardLerpRate);
 				}
-                else
-                {
-                    return;
-                }
 			}
 		}
 	}
@@ -242,6 +238,7 @@ public class card_mechanic_UI : MonoBehaviour
     public IEnumerator waitTime(float _time)
 	{
 		yield return new WaitForSeconds(_time);
+
 		StopCoroutine("waitTime");
 	}
 	#endregion

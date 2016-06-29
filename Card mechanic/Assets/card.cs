@@ -1,21 +1,19 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public class card : MonoBehaviour
 {
-    public card_mechanic_UI cardSystem;
+    public NewCardScript cardManager;
 
-    public void Start()
-    {
-        cardSystem = GameObject.FindGameObjectWithTag("CardSystem").GetComponent<card_mechanic_UI>();
-    }
 
     //When this card is clicked, apply the effect changes for this round
     //Add this card back to the deck of cards
     //Deactivate this card
-	public void SelectThisCard()
+    public void SelectThisCard()
 	{
-        cardSystem.deckOfCards.Add(this.gameObject);
+        cardManager.myDeck.Remove(this.gameObject);
 		this.gameObject.SetActive(false);
+        cardManager.isActive = false;
 	}
 }
