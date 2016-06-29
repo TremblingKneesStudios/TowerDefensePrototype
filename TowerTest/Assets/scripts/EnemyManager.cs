@@ -8,13 +8,13 @@ public class EnemyManager : MonoBehaviour {
     private float delay = 1f;
     private float range = 0.5f;
 	public NavMeshAgent myAgent;
-	// Use this for initialization
+    public GameObject target;
 	void Start () {
 		myAgent = gameObject.GetComponent<NavMeshAgent>();
-		myAgent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+        //myAgent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+        myAgent.SetDestination(target.transform.position);
 	}
 	
-	// Update is called once per frame
 	void Update () {
         if (health <= 0) {
             Destroy(gameObject);
@@ -34,12 +34,14 @@ public class EnemyManager : MonoBehaviour {
                 playerDist = Vector3.Distance(gameObject.transform.position, player.transform.position);
                 if (dist <= range || playerDist <= range) {
                     if (dist <= range) {
+                        target = towers[i];
                         towers[i].GetComponent<TowerManager>().curHealth -= power;
                         if (towers[i].GetComponent<TowerManager>().curHealth > 0) {
                             i--;
-                        }else if (playerDist <= range) {
-                            //player.GetComponent<HeroStats>().health -= power;
                         }
+                    } else if (playerDist < range) {
+                        target = player;
+                        //player.GetComponent<HeroStats>().health -= power;
                     }
                 }
             }
