@@ -4,9 +4,14 @@ using System.Collections;
 public class test : MonoBehaviour
 {
     public OptimalZone optimalZone;
+	bool added = false;
 
-    void Start()
+    void Update()
     {
-        optimalZone.onTowerDrop(gameObject);
+		if (!added)
+		{
+		    optimalZone.onTowerDrop(gameObject);
+			added = true;
+		}
     }
 }
