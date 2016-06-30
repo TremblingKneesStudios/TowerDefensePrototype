@@ -37,6 +37,8 @@ public class card : MonoBehaviour
     public float posEffectAmount = 0.0f;
     public float negEffectAmount = 0.0f;
 
+    public bool isActiveCard;
+
     public NewCardScript cardManager;
     #endregion
 
@@ -45,6 +47,7 @@ public class card : MonoBehaviour
         ManageEnums();
     }
 
+    //This is where the switch statements for the posEffect and negEffect enums are
     void ManageEnums()
     {
         #region PosEnumSwitch
@@ -75,9 +78,22 @@ public class card : MonoBehaviour
                 break;
 
             case positiveEffects.towerAttackSpeed:
-                //find(detect) all towers
-                //put all towers into an array
-                //loop through array and increase each tower's attack speed cariable by posEffectAmount
+                //OBSOLETE
+                /*if(isActiveCard)
+                {
+                    //find(detect) all towers
+                    //put all towers into an array
+                    GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+
+                    //loop through array and increase each tower's attack speed variable by posEffectAmount
+                    for (int i = 0; i < towers.Length; i++)
+                    {
+                        if (towers[i].name == "DirectDamageTower" || towers[i].name == "AOETower")
+                        {
+                            //towers[i].GetComponent<TowerManager>().delay = delay + (delay/posEffectAmount);
+                        }
+                    }
+                }*/
                 break;
 
             case positiveEffects.towerDamage:
@@ -94,13 +110,18 @@ public class card : MonoBehaviour
         switch (negEffEnum)
         {
             case negativeEffects.championHealth:
-                //apply increase of champion health, based on posEffectAmount
+                //apply decrease of champion health, based on posEffectAmount
+                //Get champion's health value
+                //Decrease by posEffectAmount, make this a percentage e.g. if posEffectAmount = 15, it decreases the champions health by 15%
                 break;
 
             case negativeEffects.championMoveSpeed:
                 break;
 
             case negativeEffects.enemyAttackSpeed:
+                //find(detect) all enemies
+                //put all enemies into an array
+                //loop through array and increase each enemies' attack speed variable by negEffectAmount
                 break;
 
             case negativeEffects.enemyDamage:
@@ -113,6 +134,9 @@ public class card : MonoBehaviour
                 break;
 
             case negativeEffects.towerAttackSpeed:
+                //find(detect) all towers
+                //put all towers into an array
+                //loop through array and decrease each tower's attack speed cariable by posEffectAmount
                 break;
 
             case negativeEffects.towerDamage:
@@ -132,8 +156,20 @@ public class card : MonoBehaviour
     //Make cardManager disappear
     public void SelectThisCard()
 	{
-        cardManager.myDeck.Remove(this.gameObject);
-		this.gameObject.SetActive(false);
-        cardManager.isActive = false;
+        if(cardManager.isActive)
+        {
+            //OBSOLETE
+            //Lets towers have effects put on them
+            //GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+            //for(int i = 0; i < towers.Length; i++)
+            //{
+                //towers[i].GetComponent<TowerManager>().hasEffect = false;
+            //}
+
+            isActiveCard = true;
+            cardManager.myDeck.Remove(this.gameObject);
+            this.gameObject.SetActive(false);
+            cardManager.isActive = false;
+        }
 	}
 }
