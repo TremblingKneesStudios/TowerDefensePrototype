@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/towerTesting.unity
+  isLoaded: 1
+  isActive: 1

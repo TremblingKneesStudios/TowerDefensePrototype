@@ -6,24 +6,30 @@ public class EnemyManager : MonoBehaviour {
     private float power = 20f;
     private bool canAtt;
     private float delay = 1f;
-    private float range = 0.5f;
-	public NavMeshAgent myAgent;
+    public float range = 2f;
+	private NavMeshAgent myAgent;
     public GameObject target;
+    public GameObject[] towers;
+	private GameObject player;
 	void Start () {
 		myAgent = gameObject.GetComponent<NavMeshAgent>();
-        //myAgent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
-        myAgent.SetDestination(target.transform.position);
+		//myAgent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
+		myAgent.SetDestination(target.transform.position);
+		canAtt = true;
 	}
 	
 	void Update () {
-        if (health <= 0) {
+		if (health <= 0) {
             Destroy(gameObject);
         }
+		if (target == null)
+		{
+			setTarget(player);
+		}
 		Attacking();
 	}
     void Attacking() {
-        GameObject[] towers;
-        GameObject player;
+        
         float dist;
         float playerDist;
         if (canAtt) {
@@ -34,24 +40,39 @@ public class EnemyManager : MonoBehaviour {
                 playerDist = Vector3.Distance(gameObject.transform.position, player.transform.position);
                 if (dist <= range || playerDist <= range) {
                     if (dist <= range) {
-                        target = towers[i];
-                        towers[i].GetComponent<TowerManager>().curHealth -= power;
+						setTarget(towers[i]);
+						if (target == towers[i])
+						{
+							towers[i].GetComponent<TowerManager>().curHealth -= power;
+							StartCoroutine("AttCooldown");
+						}
                         if (towers[i].GetComponent<TowerManager>().curHealth > 0) {
                             i--;
                         }
                     } else if (playerDist < range) {
-                        target = player;
-                        //player.GetComponent<HeroStats>().health -= power;
-                    }
+                        setTarget(player);
+						//player.GetComponent<HeroStats>().health -= power;
+						StartCoroutine("AttCooldown");
+					}
                 }
             }
-            StartCoroutine(AttCooldown(canAtt));
+            StartCoroutine("AttCooldown");
         }
     }
-    IEnumerator AttCooldown(bool canAtt) {
-        canAtt = false;
+
+	void setTarget(GameObject _target)
+	{
+		target = _target;
+		Debug.Log(target);
+		myAgent.SetDestination(target.transform.position);
+
+	}
+    IEnumerator AttCooldown() {
+	//	canAtk = false;
+		canAtt = false;
         yield return new WaitForSeconds(delay);
-        canAtt = true;
+		canAtt = true;
+	//	canAtk = true;
         StopCoroutine("AttCooldown");
     }
 }
