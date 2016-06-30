@@ -29,7 +29,7 @@ public class TowerManager : MonoBehaviour {
     //private Vector3 uiPosition;
 
     void Start () {
-        checkType();
+        //checkType();
         playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResources>();
         upgradeBttn.SetActive(false);//fix later
         setHealth = false;
@@ -99,6 +99,7 @@ public class TowerManager : MonoBehaviour {
         if (!setHealth) {
             maxHealth = 20f;
             curHealth = maxHealth;
+            power = 160f;
             range = 4f;
             delay = 1f;
             upgradeCost = 100f;
@@ -260,7 +261,7 @@ public class TowerManager : MonoBehaviour {
                 }
             }
             for (int u = 0; u < beingHealed.Count; u++) {
-                beingHealed[u].GetComponent<TowerManager>().curHealth += 160f;
+                beingHealed[u].GetComponent<TowerManager>().curHealth += power;
             }
             StartCoroutine(HealCooldown(canHeal));
         }
