@@ -1,0 +1,507 @@
+fileFormatVersion: 2
+guid: 6f59fbadc4c7fd046bbb204239749c93
+timeCreated: 1467248558
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Back1
+    100002: Back2
+    100004: Back3
+    100006: Back4
+    100008: Back5
+    100010: Back6
+    100012: Back7
+    100014: Back8
+    100016: Cape
+    100018: //RootNode
+    100020: Cloth
+    100022: Cloth1
+    100024: Cloth2
+    100026: Cloth3
+    100028: Cloth4
+    100030: Cloth5
+    100032: Cloth6
+    100034: Head
+    100036: Knight_67
+    100038: Left_Ankle
+    100040: Left_Clavical
+    100042: Left_Elbow
+    100044: Left_Feet
+    100046: Left_ForeArm
+    100048: Left_Hand
+    100050: Left_Knee
+    100052: Left_Shoulder
+    100054: Left_Thigh
+    100056: Left_Toetip
+    100058: Left_Wrist
+    100060: Neck
+    100062: Right_Ankle
+    100064: Right_Clavical
+    100066: Right_Elbow
+    100068: Right_Feet
+    100070: Right_ForeArm
+    100072: Right_Hand
+    100074: Right_Knee
+    100076: Right_Shoulder
+    100078: Right_Thigh
+    100080: Right_Toetip
+    100082: Right_Wrist
+    100084: Root
+    400000: Back1
+    400002: Back2
+    400004: Back3
+    400006: Back4
+    400008: Back5
+    400010: Back6
+    400012: Back7
+    400014: Back8
+    400016: Cape
+    400018: //RootNode
+    400020: Cloth
+    400022: Cloth1
+    400024: Cloth2
+    400026: Cloth3
+    400028: Cloth4
+    400030: Cloth5
+    400032: Cloth6
+    400034: Head
+    400036: Knight_67
+    400038: Left_Ankle
+    400040: Left_Clavical
+    400042: Left_Elbow
+    400044: Left_Feet
+    400046: Left_ForeArm
+    400048: Left_Hand
+    400050: Left_Knee
+    400052: Left_Shoulder
+    400054: Left_Thigh
+    400056: Left_Toetip
+    400058: Left_Wrist
+    400060: Neck
+    400062: Right_Ankle
+    400064: Right_Clavical
+    400066: Right_Elbow
+    400068: Right_Feet
+    400070: Right_ForeArm
+    400072: Right_Hand
+    400074: Right_Knee
+    400076: Right_Shoulder
+    400078: Right_Thigh
+    400080: Right_Toetip
+    400082: Right_Wrist
+    400084: Root
+    4300000: Cape
+    4300002: Knight_67
+    7400000: ANM_CHR-HERO_IDLE
+    7400002: ANM_CHR-HERO_WALK
+    7400004: ANM_CHR_TWR-SUMMON
+    9500000: //RootNode
+    13700000: Cape
+    13700002: Knight_67
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleRotations: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: ANM_CHR-HERO_IDLE
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: Cloth
+        weight: 1
+      - path: Cloth/Cloth1
+        weight: 1
+      - path: Cloth/Cloth2
+        weight: 1
+      - path: Cloth/Cloth3
+        weight: 1
+      - path: Cloth/Cloth4
+        weight: 1
+      - path: Cloth/Cloth5
+        weight: 1
+      - path: Cloth/Cloth6
+        weight: 1
+      - path: Knight_67
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Back1
+        weight: 1
+      - path: Root/Back1/Back2
+        weight: 1
+      - path: Root/Back1/Back2/Back3
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Neck
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Neck/Head
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm/Left_Wrist
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm/Left_Wrist/Left_Hand
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm/Right_Wrist
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm/Right_Wrist/Right_Hand
+        weight: 1
+      - path: Root/Left_Thigh
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet/Left_Toetip
+        weight: 1
+      - path: Root/Right_Thigh
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet/Right_Toetip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ANM_CHR-HERO_WALK
+      takeName: Take 001
+      firstFrame: 25
+      lastFrame: 48
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: Cloth
+        weight: 1
+      - path: Cloth/Cloth1
+        weight: 1
+      - path: Cloth/Cloth2
+        weight: 1
+      - path: Cloth/Cloth3
+        weight: 1
+      - path: Cloth/Cloth4
+        weight: 1
+      - path: Cloth/Cloth5
+        weight: 1
+      - path: Cloth/Cloth6
+        weight: 1
+      - path: Knight_67
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Back1
+        weight: 1
+      - path: Root/Back1/Back2
+        weight: 1
+      - path: Root/Back1/Back2/Back3
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Neck
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Neck/Head
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm/Left_Wrist
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm/Left_Wrist/Left_Hand
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm/Right_Wrist
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm/Right_Wrist/Right_Hand
+        weight: 1
+      - path: Root/Left_Thigh
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet/Left_Toetip
+        weight: 1
+      - path: Root/Right_Thigh
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet/Right_Toetip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ANM_CHR_TWR-SUMMON
+      takeName: Take 001
+      firstFrame: 49
+      lastFrame: 72
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 1
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cape
+        weight: 1
+      - path: Cloth
+        weight: 1
+      - path: Cloth/Cloth1
+        weight: 1
+      - path: Cloth/Cloth2
+        weight: 1
+      - path: Cloth/Cloth3
+        weight: 1
+      - path: Cloth/Cloth4
+        weight: 1
+      - path: Cloth/Cloth5
+        weight: 1
+      - path: Cloth/Cloth6
+        weight: 1
+      - path: Knight_67
+        weight: 1
+      - path: Root
+        weight: 1
+      - path: Root/Back1
+        weight: 1
+      - path: Root/Back1/Back2
+        weight: 1
+      - path: Root/Back1/Back2/Back3
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Neck
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Neck/Head
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm/Left_Wrist
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Left_Clavical/Left_Shoulder/Left_Elbow/Left_ForeArm/Left_Wrist/Left_Hand
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm/Right_Wrist
+        weight: 1
+      - path: Root/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Right_Clavical/Right_Shoulder/Right_Elbow/Right_ForeArm/Right_Wrist/Right_Hand
+        weight: 1
+      - path: Root/Left_Thigh
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet
+        weight: 1
+      - path: Root/Left_Thigh/Left_Knee/Left_Ankle/Left_Feet/Left_Toetip
+        weight: 1
+      - path: Root/Right_Thigh
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet
+        weight: 1
+      - path: Root/Right_Thigh/Right_Knee/Right_Ankle/Right_Feet/Right_Toetip
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

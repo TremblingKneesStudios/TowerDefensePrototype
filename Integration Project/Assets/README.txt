@@ -12,12 +12,13 @@ MAT = material
 SHD = shader
 SPT = sprite
 TER = terrain
+ANM = animation
 
 XXX_CLD = child is main object (parent is used for positioning)
 
 ========
 
-EXPORT PACKAGE CONVENTIONS:
+EXPORT PACKAGE README CONVENTIONS:
 
 object:
 component1

@@ -2,7 +2,8 @@
 using System.Collections;
 using UnityEngine.UI;
 
-public class MenuItem : MonoBehaviour {
+public class MenuItem : MonoBehaviour
+{
 
 	public Slider damageSlider;
 	public Slider moveSpeedSlider;
@@ -18,6 +19,7 @@ public class MenuItem : MonoBehaviour {
 	private float health;
 	private string heroName;
 	private GameObject heroPrefab;
+	public Transform heroSpawnPos;
 	private Canvas menuCanvas;
 	private Color mainColor; //Temp
 
@@ -46,7 +48,7 @@ public class MenuItem : MonoBehaviour {
 
 	public void LoadHero()
 	{
-		GameObject newHero = Instantiate (heroPrefab) as GameObject;
+		GameObject newHero = Instantiate (heroPrefab, heroSpawnPos.position, heroSpawnPos.rotation) as GameObject;
 
 		HeroStats newHeroStats = newHero.GetComponent<HeroStats> ();
 
