@@ -2,18 +2,20 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class NewCardScript : MonoBehaviour {
-
+public class NewCardScript : MonoBehaviour
+{
+    #region Variables
     public int maxAmount = 5;
     public List<GameObject> masterDeck;
     [HideInInspector]
     public List<GameObject> masterDeckClone;    //aim to get rid mof this, make i redundant
     public List<GameObject> myDeck;
     public bool isActive;
-    private float speed = 7.5f;                 
+    private float speed = 7.5f;
+    #endregion
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         GatherMasterCards();        
 	}
 	
