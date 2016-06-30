@@ -300,6 +300,7 @@ ModelImporter:
     4300000: polySurface10
     7400000: ANM_CHR-ORC_WALK
     7400002: ANM_CHR-ORC_ATTACK
+    7400004: ANM_CHR-ORC_DEATH
     9500000: //RootNode
     13700000: polySurface10
   materials:
@@ -648,6 +649,326 @@ ModelImporter:
       takeName: Take 001
       firstFrame: 35
       lastFrame: 75
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: back
+        weight: 1
+      - path: L_Arm_IK
+        weight: 1
+      - path: left
+        weight: 1
+      - path: pCone1
+        weight: 1
+      - path: pCone1/transform18
+        weight: 1
+      - path: pCone2
+        weight: 1
+      - path: pCone2/polySurface4
+        weight: 1
+      - path: pCone2/polySurface4/transform4
+        weight: 1
+      - path: pCone2/polySurface5
+        weight: 1
+      - path: pCone2/polySurface5/transform5
+        weight: 1
+      - path: pCone2/transform1
+        weight: 1
+      - path: pCone3
+        weight: 1
+      - path: pCone3/transform16
+        weight: 1
+      - path: pCone4
+        weight: 1
+      - path: pCone4/transform14
+        weight: 1
+      - path: pCone5
+        weight: 1
+      - path: pCone5/transform13
+        weight: 1
+      - path: pCone6
+        weight: 1
+      - path: pCone6/polySurface6
+        weight: 1
+      - path: pCone6/polySurface6/transform7
+        weight: 1
+      - path: pCone6/polySurface7
+        weight: 1
+      - path: pCone6/polySurface7/transform6
+        weight: 1
+      - path: pCone6/transform2
+        weight: 1
+      - path: pCone7
+        weight: 1
+      - path: pCone7/polySurface8
+        weight: 1
+      - path: pCone7/polySurface8/transform8
+        weight: 1
+      - path: pCone7/polySurface9 1
+        weight: 1
+      - path: pCone7/polySurface9 1/transform9
+        weight: 1
+      - path: pCone7/transform3
+        weight: 1
+      - path: pCube1
+        weight: 1
+      - path: pCube1/transform11
+        weight: 1
+      - path: pCube2
+        weight: 1
+      - path: pCube2/transform10
+        weight: 1
+      - path: polySurface9
+        weight: 1
+      - path: polySurface9/transform12
+        weight: 1
+      - path: polySurface10
+        weight: 1
+      - path: pSphere1
+        weight: 1
+      - path: pSphere1/polySurface2
+        weight: 1
+      - path: pSphere1/polySurface2/transform20
+        weight: 1
+      - path: pSphere1/polySurface3
+        weight: 1
+      - path: pSphere1/polySurface3/transform19
+        weight: 1
+      - path: pTorus1
+        weight: 1
+      - path: pTorus1/transform17
+        weight: 1
+      - path: pTorus2
+        weight: 1
+      - path: pTorus2/transform15
+        weight: 1
+      - path: R_Arm_IK
+        weight: 1
+      - path: RIgging_Group
+        weight: 1
+      - path: RIgging_Group/Back_Curve
+        weight: 1
+      - path: RIgging_Group/Back_IK
+        weight: 1
+      - path: Skeleton
+        weight: 1
+      - path: Skeleton/BackRoot
+        weight: 1
+      - path: Skeleton/BackRoot/Back1
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Back9
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Back9/Neck
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Back9/Neck/Face
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/Back9/Neck/Face/Head
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm/L_Wrist
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm/L_Wrist/L_hand
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm/L_Wrist/L_hand/L_Fingers
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm/L_Wrist/L_hand/L_Fingers/joint1
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm/L_Wrist/L_hand/L_Fingers/joint1/L_FInger2
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm/L_Wrist/L_hand/L_Thumb
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/L_Clavicle/L_Shoulder/L_Elbow/L_Forearm/L_Wrist/L_hand/L_Thumb/L_Thumb2
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm/R_Wrist
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm/R_Wrist/R_hand
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm/R_Wrist/R_hand/R_Fingers
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm/R_Wrist/R_hand/R_Fingers/joint2
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm/R_Wrist/R_hand/R_Fingers/joint2/R_FInger2
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm/R_Wrist/R_hand/R_Thumb
+        weight: 1
+      - path: Skeleton/BackRoot/Back1/Back2/Back3/Back4/Back5/Back6/Back7/Back8/R_Clavicle/R_Shoulder/R_Elbow/R_Forearm/R_Wrist/R_hand/R_Thumb/R_Thumb2
+        weight: 1
+      - path: Skeleton/BackRoot/L_Leg
+        weight: 1
+      - path: Skeleton/BackRoot/L_Leg/L_Knee
+        weight: 1
+      - path: Skeleton/BackRoot/L_Leg/L_Knee/L_Ankle
+        weight: 1
+      - path: Skeleton/BackRoot/L_Leg/L_Knee/L_Ankle/L_Foot
+        weight: 1
+      - path: Skeleton/BackRoot/L_Leg/L_Knee/L_Ankle/L_Foot/L_Toe
+        weight: 1
+      - path: Skeleton/BackRoot/L_Leg/L_Knee/L_Ankle/L_Foot/L_Toe/L_ToeEnd
+        weight: 1
+      - path: Skeleton/BackRoot/R_Leg
+        weight: 1
+      - path: Skeleton/BackRoot/R_Leg/R_Knee
+        weight: 1
+      - path: Skeleton/BackRoot/R_Leg/R_Knee/R_Ankle
+        weight: 1
+      - path: Skeleton/BackRoot/R_Leg/R_Knee/R_Ankle/R_Foot
+        weight: 1
+      - path: Skeleton/BackRoot/R_Leg/R_Knee/R_Ankle/R_Foot/R_Toe
+        weight: 1
+      - path: Skeleton/BackRoot/R_Leg/R_Knee/R_Ankle/R_Foot/R_Toe/R_ToeEnd
+        weight: 1
+      - path: SuperMover_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/BackBend_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/BackBend_CTRL/UpperBack_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/BackBend_CTRL/UpperBack_CTRL/L_Clavicle_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/BackBend_CTRL/UpperBack_CTRL/R_Clavicle_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/BackBend_CTRL/UpperBack_CTRL/Upper_Cluster
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/Head_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/Head_CTRL/Head_IK
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/L_Elbow_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/L_Hand_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/L_Hand_CTRL/nurbsCircle1
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/L_Hand_CTRL/nurbsCircle1/ikHandle1
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/L_Hand_CTRL/nurbsCircle3
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/L_Hand_CTRL/nurbsCircle3/ikHandle3
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/LowerBack_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/LowerBack_CTRL/Lower_Cluster
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/R_Elbow_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/R_Hand_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/R_Hand_CTRL/nurbsCircle2
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/R_Hand_CTRL/nurbsCircle2/ikHandle2
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/R_Hand_CTRL/R_Fingers_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/Body_CTRL/R_Hand_CTRL/R_Fingers_CTRL/R_FIngers
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot/L_ToeTip_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot/L_ToeTip_Pivot/L_Swivel_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot/L_ToeTip_Pivot/L_Swivel_Pivot/L_HeelPeel_PIivot
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot/L_ToeTip_Pivot/L_Swivel_Pivot/L_HeelPeel_PIivot/L_Leg_IK
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot/L_ToeTip_Pivot/L_Swivel_Pivot/L_ToeTap_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot/L_ToeTip_Pivot/L_Swivel_Pivot/L_ToeTap_Pivot/L_Foot_IK
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Ankle_Pivot/L_ToeTip_Pivot/L_Swivel_Pivot/L_ToeTap_Pivot/L_Knee_IK
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Toe_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/L_Leg_CTRL/L_Toe_CTRL/ikHandle6
+        weight: 1
+      - path: SuperMover_CTRL/R_Knee_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/R_Knee_CTRL1
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot/R_ToeTip_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot/R_ToeTip_Pivot/R_Swivel_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot/R_ToeTip_Pivot/R_Swivel_Pivot/R_HeelPeel_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot/R_ToeTip_Pivot/R_Swivel_Pivot/R_HeelPeel_Pivot/R_Leg_IK
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot/R_ToeTip_Pivot/R_Swivel_Pivot/R_ToeTap_Pivot
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot/R_ToeTip_Pivot/R_Swivel_Pivot/R_ToeTap_Pivot/R_Foot_IK
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Ankle_Pivot/R_ToeTip_Pivot/R_Swivel_Pivot/R_ToeTap_Pivot/R_Knee_IK
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Toe_CTRL
+        weight: 1
+      - path: SuperMover_CTRL/R_Leg_CTRL/R_Toe_CTRL/ikHandle5
+        weight: 1
+      - path: top1
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 1
+    - serializedVersion: 16
+      name: ANM_CHR-ORC_DEATH
+      takeName: Take 001
+      firstFrame: 80
+      lastFrame: 90
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
