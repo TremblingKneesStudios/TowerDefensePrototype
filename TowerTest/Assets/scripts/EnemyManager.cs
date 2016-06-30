@@ -10,11 +10,13 @@ public class EnemyManager : MonoBehaviour {
 	private NavMeshAgent myAgent;
     public GameObject target;
     public GameObject[] towers;
-	private GameObject player;
+	public GameObject player;
 	void Start () {
 		myAgent = gameObject.GetComponent<NavMeshAgent>();
 		//myAgent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
-		myAgent.SetDestination(target.transform.position);
+		towers = GameObject.FindGameObjectsWithTag("Towers");
+		player = GameObject.FindGameObjectWithTag("Player");
+	//	myAgent.SetDestination(target.transform.position);
 		canAtt = true;
 	}
 	
@@ -32,9 +34,7 @@ public class EnemyManager : MonoBehaviour {
         
         float dist;
         float playerDist;
-        if (canAtt) {
-            towers = GameObject.FindGameObjectsWithTag("Towers");
-            player = GameObject.FindGameObjectWithTag("Player");
+        if (canAtt) {            
             for (int i = 0; i < towers.Length; i++) {
                 dist = Vector3.Distance(gameObject.transform.position, towers[i].transform.position);
                 playerDist = Vector3.Distance(gameObject.transform.position, player.transform.position);
