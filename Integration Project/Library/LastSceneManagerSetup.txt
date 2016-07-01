@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/gameScene.unity
+- path: C:/Users/samuel.giumelli1/Desktop/EnvrionmentProject/Assets/Scenes/GameLevel.unity
   isLoaded: 1
   isActive: 1
