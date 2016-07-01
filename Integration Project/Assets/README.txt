@@ -43,3 +43,4 @@ playerManager (script)
 
 ==----==
 //do not edit varaibles not mentioned in README
+//it could screw up the object or it will be changed in runtime

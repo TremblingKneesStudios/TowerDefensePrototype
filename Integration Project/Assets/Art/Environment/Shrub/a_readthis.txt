@@ -1,0 +1,4 @@
+The shrub texture has transparency so set the shader to Transparent or Cutout, idk whatever makes the transparency work.
+
+01 has flowers
+02 does not.

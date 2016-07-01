@@ -15,6 +15,13 @@ public class Resource : MonoBehaviour {
 
 	public float resourceAmount;
 
+	void Update()
+	{
+		if (resourceAmount <= 0)
+		{
+			Destroy(gameObject);
+		}
+	}
 	public ResourceType GetResourceType()
 	{
 		return currentType;

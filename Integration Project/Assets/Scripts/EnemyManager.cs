@@ -14,8 +14,6 @@ public class EnemyManager : MonoBehaviour {
 	void Start () {
 		myAgent = gameObject.GetComponent<NavMeshAgent>();
 		//myAgent.SetDestination(GameObject.FindGameObjectWithTag("Player").transform.position);
-		towers = GameObject.FindGameObjectsWithTag("Towers");
-		player = GameObject.FindGameObjectWithTag("Player");
 	//	myAgent.SetDestination(target.transform.position);
 		canAtt = true;
 	}
@@ -24,6 +22,13 @@ public class EnemyManager : MonoBehaviour {
 		if (health <= 0) {
             Destroy(gameObject);
         }
+
+		towers = GameObject.FindGameObjectsWithTag("Towers");		
+		if (player == null)
+		{
+			player = GameObject.FindGameObjectWithTag("Player");
+		}
+
 		if (target == null)
 		{
 			setTarget(player);

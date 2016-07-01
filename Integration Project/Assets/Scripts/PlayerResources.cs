@@ -1,11 +1,18 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+[System.Serializable]
+public struct resources
+{
+	public float crystal;
+	public float ironOre;
+	public float elixir;
+	public float essence;
+}
+
 public class PlayerResources : MonoBehaviour {
-    public float crystal;
-    public float ironOre;
-    public float elixir;
-    public float essence;
+
+	public resources materials;
 
 	public float mineRate;
 	public float maxMineDist;
@@ -68,19 +75,19 @@ public class PlayerResources : MonoBehaviour {
 
 			if (currentResourceType == Resource.ResourceType.crystal)
 			{
-				crystal += newResourceAmount;
+				materials.crystal += newResourceAmount;
 			}
 			if (currentResourceType == Resource.ResourceType.elixir)
 			{
-				elixir += newResourceAmount;
+				materials.elixir += newResourceAmount;
 			}
 			if (currentResourceType == Resource.ResourceType.essence)
 			{
-				essence += newResourceAmount;
+				materials.essence += newResourceAmount;
 			}
 			if (currentResourceType == Resource.ResourceType.ironOre)
 			{
-				ironOre += newResourceAmount;
+				materials.ironOre += newResourceAmount;
 			}
 		}
 	}

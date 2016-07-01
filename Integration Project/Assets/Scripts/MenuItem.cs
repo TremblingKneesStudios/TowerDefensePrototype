@@ -46,6 +46,7 @@ public class MenuItem : MonoBehaviour {
 	public void LoadHero()
 	{
 		GameObject newHero = Instantiate (heroPrefab) as GameObject;
+		GameObject heroCape = newHero.transform.FindChild("Cape").gameObject;
 
 		HeroStats newHeroStats = newHero.GetComponent<HeroStats> ();
 
@@ -58,8 +59,8 @@ public class MenuItem : MonoBehaviour {
 		newHero.name = heroName + " Hero";
 
 		//Temporary just for visualisation
-		newHero.GetComponent<MeshRenderer>().material.color = mainColor;
+		heroCape.GetComponent<SkinnedMeshRenderer>().material.color = mainColor;
 
-		menuCanvas.enabled = false;
+		menuCanvas.gameObject.SetActive(false);
 	}
 }

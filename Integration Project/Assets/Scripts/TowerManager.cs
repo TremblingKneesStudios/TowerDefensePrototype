@@ -30,13 +30,20 @@ public class TowerManager : MonoBehaviour {
 
     void Start () {
         //checkType();
-        playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResources>();
         upgradeBttn.SetActive(false);//fix later
         setHealth = false;
         settingValues();
 	}
 	void Update () {
-        checkResources();
+		if (playerScript != null)
+		{
+		    checkResources();
+		}
+		else
+		{
+			playerScript = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerResources>();
+		}
+
         if (canUpgrade) {
             upgradeBttn.SetActive(true);//fix later
         } else {
@@ -49,30 +56,37 @@ public class TowerManager : MonoBehaviour {
             Destroy(gameObject);
         }
     }
+	/**
+	void OnDrawGizmos()
+	{
+		Gizmos.DrawSphere(transform.position, range);
+	}
+	/**/
+
     public void checkResources() {
-        if (types == towerType.healing && playerScript.elixir >= upgradeCost) {
+        if (types == towerType.healing && playerScript.materials.elixir >= upgradeCost) {
             canUpgrade = true;
-        } else if (types == towerType.healing && playerScript.elixir <= upgradeCost) {
+        } else if (types == towerType.healing && playerScript.materials.elixir <= upgradeCost) {
             canUpgrade = false;
         }
-        if (types == towerType.directDamage && playerScript.ironOre >= upgradeCost) {
+        if (types == towerType.directDamage && playerScript.materials.ironOre >= upgradeCost) {
             canUpgrade = true;
-        } else if (types == towerType.directDamage && playerScript.ironOre <= upgradeCost) {
+        } else if (types == towerType.directDamage && playerScript.materials.ironOre <= upgradeCost) {
             canUpgrade = false;
         }
-        if (types == towerType.generator && playerScript.crystal >= upgradeCost) {
+        if (types == towerType.generator && playerScript.materials.crystal >= upgradeCost) {
             canUpgrade = true;
-        } else if (types == towerType.generator && playerScript.crystal <= upgradeCost) {
+        } else if (types == towerType.generator && playerScript.materials.crystal <= upgradeCost) {
             canUpgrade = false;
         }
-        if (types == towerType.aoe && playerScript.essence >= upgradeCost) {
+        if (types == towerType.aoe && playerScript.materials.essence >= upgradeCost) {
             canUpgrade = true;
-        } else if (types == towerType.aoe && playerScript.essence <= upgradeCost) {
+        } else if (types == towerType.aoe && playerScript.materials.essence <= upgradeCost) {
             canUpgrade = false;
         }
-        if (types == towerType.obelisk && playerScript.elixir >= upgradeCost && playerScript.ironOre >= upgradeCost && playerScript.crystal >= upgradeCost && playerScript.essence >= upgradeCost) {
+        if (types == towerType.obelisk && playerScript.materials.elixir >= upgradeCost && playerScript.materials.ironOre >= upgradeCost && playerScript.materials.crystal >= upgradeCost && playerScript.materials.essence >= upgradeCost) {
             canUpgrade = true;
-        } else if (types == towerType.obelisk && playerScript.elixir <= upgradeCost && playerScript.ironOre <= upgradeCost && playerScript.crystal <= upgradeCost && playerScript.essence <= upgradeCost) {
+        } else if (types == towerType.obelisk && playerScript.materials.elixir <= upgradeCost && playerScript.materials.ironOre <= upgradeCost && playerScript.materials.crystal <= upgradeCost && playerScript.materials.essence <= upgradeCost) {
             canUpgrade = false;
         }
     }
@@ -195,22 +209,22 @@ public class TowerManager : MonoBehaviour {
     }
     void minusResources() {
         if (types == towerType.healing) {
-            playerScript.elixir -= upgradeCost;
+            playerScript.materials.elixir -= upgradeCost;
         }
         if (types == towerType.directDamage) {
-            playerScript.ironOre -= upgradeCost;
+            playerScript.materials.ironOre -= upgradeCost;
         }
         if (types == towerType.generator) {
-            playerScript.crystal -= upgradeCost;
+            playerScript.materials.crystal -= upgradeCost;
         }
         if (types == towerType.aoe) {
-            playerScript.essence -= upgradeCost;
+            playerScript.materials.essence -= upgradeCost;
         }
         if (types == towerType.obelisk) {
-            playerScript.elixir -= upgradeCost;
-            playerScript.ironOre -= upgradeCost;
-            playerScript.crystal -= upgradeCost;
-            playerScript.essence -= upgradeCost;
+            playerScript.materials.elixir -= upgradeCost;
+            playerScript.materials.ironOre -= upgradeCost;
+            playerScript.materials.crystal -= upgradeCost;
+            playerScript.materials.essence -= upgradeCost;
 
         }
     }
