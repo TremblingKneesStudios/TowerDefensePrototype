@@ -11,28 +11,55 @@ public class CardEffectHolder : MonoBehaviour {
     public float posAmount = 0.0f;
     public float negAmount = 0.0f;
 
-    // Use this for initialization
+    #region BaseVariables
+    float baseTowerHTH;
+    #endregion
+
     void Start () {
         cardHolder = gameObject.GetComponent<NewCardScript>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
         ApplyEffects();
 	}
 
-    void ApplyEffects()
+    void ResetValues()
     {
-        if (!cardHolder.isActive)
-        {
+        //Player
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        player.GetComponent<HeroStats>().moveSpeed = player.GetComponent<HeroStats>().baseMoveSpeed;
+        player.GetComponent<HeroStats>().health = player.GetComponent<HeroStats>().baseHealth;
+        //Towers
+
+        //Enemies
+    }
+
+    public void ApplyEffects()
+    {
+        ResetValues();
             #region apply positive effects
             switch (posEff)
             {
                 case card.positiveEffects.championMoveSpeed:
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    float playerMS = player.GetComponent<HeroStats>().moveSpeed;
+                    float playerMSBase = player.GetComponent<HeroStats>().baseMoveSpeed;
+                    player.GetComponent<HeroStats>().moveSpeed = playerMSBase + (playerMSBase / posAmount);
                     break;
+
                 case card.positiveEffects.championHealth:
+                    player = GameObject.FindGameObjectWithTag("Player");
+                    float playerHth = player.GetComponent<HeroStats>().health;
+                    player.GetComponent<HeroStats>().health = playerHth + (playerHth / posAmount);
                     break;
+
                 case card.positiveEffects.towerHealth:
+                GameObject[] towers = GameObject.FindGameObjectsWithTag("Tower");
+                for (int i = 0; i < towers.Length; i++)
+                {
+                    //*Needs multiple floats for different tower types with different health values
+                    //towers[i].GetComponent<TowerManager>().curHealth = baseTowerHTH
+                }
                     break;
                 case card.positiveEffects.towerRange:
                     break;
@@ -57,10 +84,18 @@ public class CardEffectHolder : MonoBehaviour {
             switch (negEff)
             {
                 case card.negativeEffects.championMoveSpeed:
+                    GameObject player = GameObject.FindGameObjectWithTag("Player");
+                    float playerMS = player.GetComponent<HeroStats>().moveSpeed;
+                    float playerMSBase = player.GetComponent<HeroStats>().baseMoveSpeed;
+                    player.GetComponent<HeroStats>().moveSpeed = playerMSBase - (playerMSBase / posAmount);
+                    break;
 
-                    break;
                 case card.negativeEffects.championHealth:
+                    player = GameObject.FindGameObjectWithTag("Player");
+                    float playerHth = player.GetComponent<HeroStats>().health;
+                    player.GetComponent<HeroStats>().health = playerHth - (playerHth / posAmount);
                     break;
+
                 case card.negativeEffects.towerHealth:
                     break;
                 case card.negativeEffects.towerRange:
@@ -81,7 +116,7 @@ public class CardEffectHolder : MonoBehaviour {
                     break;
             }
             #endregion
-        }
+        
 
     }
 }

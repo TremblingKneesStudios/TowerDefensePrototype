@@ -12,8 +12,6 @@ public class NewCardScript : MonoBehaviour
     public List<GameObject> myDeck;
     public bool isActive;
     private float speed = 7.5f;
-
-    
     #endregion
 
     // Use this for initialization
@@ -86,5 +84,4 @@ public class NewCardScript : MonoBehaviour
             myRect.anchoredPosition = Vector2.MoveTowards(myRect.anchoredPosition, offScreenTarget, speed);
         }
     }
-
 }

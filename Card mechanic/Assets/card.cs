@@ -62,6 +62,8 @@ public class card : MonoBehaviour
 
             cardEffect.posAmount = posEffectAmount;
             cardEffect.negAmount = negEffectAmount;
+
+           // cardEffect.ApplyEffects();
         }
 	}
 }
